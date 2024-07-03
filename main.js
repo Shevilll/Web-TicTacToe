@@ -15,7 +15,7 @@ const win = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currplayer = "X";
 let running = true;
-let mode = "human"; // Default mode
+let mode = "human";
 
 start();
 
@@ -28,7 +28,7 @@ function start() {
 
 function changeMode() {
     mode = modeSelector.value;
-    restarting(); // Restart game on mode change
+    restarting();
 }
 
 function clicked() {
@@ -41,9 +41,9 @@ function clicked() {
     checkwinner();
 
     if (mode === "ai" && currplayer === "O" && running) {
-        setTimeout(aiMove, 500);
+        setTimeout(aiMove, 0);
     } else if (mode === "normalai" && currplayer === "O" && running) {
-        setTimeout(normalaiMove, 500);
+        setTimeout(normalaiMove, 0);
     }
 }
 
